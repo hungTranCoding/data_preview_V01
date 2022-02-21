@@ -21,9 +21,9 @@ table_list = [
     'hourly_market_cap',
     'hourly_price',
     'hourly_vol',
-    'minute_market_cap',
-    'minute_price',
-    'minute_vol',
+#    'minute_market_cap',
+#    'minute_price',
+#    'minute_vol',
     'temp_market_cap',
     'temp_price',
     'temp_vol'
