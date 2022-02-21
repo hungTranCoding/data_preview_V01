@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import time
 import missingno as msno
+from sqlalchemy import create_engine
 
 #config StreamLit
 st.set_page_config(layout='wide')
@@ -50,7 +51,8 @@ placeholder.text("Loading data..")
 
 #loading data
 for table_name in table_list:
-    data[table_name] = pd.read_sql_table(table_name, 'mysql+pymysql://root:123456@35.185.176.202/crypto')
+    engine=create_engine('mysql+pymysql://root:123456@35.185.176.202/crypto')
+    data[table_name] = pd.read_sql_table(table_name, engine)
 
 placeholder.text("Data loaded..")
 time.sleep(2)
