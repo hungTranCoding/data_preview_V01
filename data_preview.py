@@ -6,6 +6,7 @@ import seaborn as sns
 import time
 import missingno as msno
 from sqlalchemy import create_engine
+import pymysql
 
 #config StreamLit
 st.set_page_config(layout='wide')
